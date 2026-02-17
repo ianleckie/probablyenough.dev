@@ -22,11 +22,4 @@ Probably Enough is a practical set of tools for people who love writing the web,
 
 ---
 
-[Probably Enough](https://probablyenough.dev) is [made by @ianleckie](https://ianleckie.me)
-
-<!--
-    ?
-    https://p13h.dev
-    https://nomu.dev
-    https://huebris.dev
--->
+> [Probably Enough](https://probablyenough.dev) is [made by @ianleckie](https://ianleckie.me)
