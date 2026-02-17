@@ -12,13 +12,13 @@ Probably Enough is a practical set of tools for people who love writing the web,
 
 - **[nomustache](https://nomustache.probablyenough.dev/)** A simple and brutalist take on static site generation with Mustache templating and Markdown support.
 - **[huebris.js](https://huebris.probablyenough.dev/)** A script for automating generation of hue-based CSS color palettes.
-- **[Probability Box](https://pbox.probablyenough.dev/)** A bash tool for simplifying management of self-contained dev environments with Docker.
+<!-- - **[Probability Box](https://pbox.probablyenough.dev/)** A bash tool for simplifying management of self-contained dev environments with Docker.
     - generate and update custom docker configs via CLI UI
         - configs saved in git
         - common base tools included in question flow, ie. npm, nginx, php, composer, python, yarn, vue, laravel, redis, mariadb, postgres, nosql etc.
             - need to determine where to start - maybe npm, nginx, php, composer, nosql
     - shortcuts for creating, starting, stopping, destroying, and interacting with your environment(s)
-- **[Probably Enough Cheatsheets](https://probablyenough.dev/cheatsheets/)** To-the-point cheatsheets for Probably Enough tools, vanilla web technologies, and even some (gasp!) frameworks and libraries I use.
+- **[Probably Enough Cheatsheets](https://probablyenough.dev/cheatsheets/)** To-the-point cheatsheets for Probably Enough tools, vanilla web technologies, and even some (gasp!) frameworks and libraries I use. -->
 
 ---
 
