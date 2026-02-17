@@ -4,7 +4,7 @@ Tools for crafting the web that are Probably Enough 🤷.
 
 ---
 
-*Most projects do not need 80% of what we pretend they need.*
+*Many projects do not need 80% of what we pretend they need.*
 
 Probably Enough is a practical set of tools for people who love writing the web, but who don't want 400MB of node_modules to say hello world.
 
