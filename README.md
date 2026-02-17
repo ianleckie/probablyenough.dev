@@ -6,7 +6,7 @@ Tools for crafting the web that are Probably Enough.
 
 *Many projects do not need 80% of what we pretend they need.*
 
-Probably Enough is a practical set of tools for people who love writing the web, but who don't want 400MB of node_modules to say hello world.
+Probably Enough is a practical set of tools for people who love writing the web, but who don't want 400MB of node_modules to publish `index.html`.
 
 ## Probably Enough Tools:
 
@@ -18,7 +18,7 @@ Probably Enough is a practical set of tools for people who love writing the web,
         - common base tools included in question flow, ie. npm, nginx, php, composer, python, yarn, vue, laravel, redis, mariadb, postgres, nosql etc.
             - need to determine where to start - maybe npm, nginx, php, composer, nosql
     - shortcuts for creating, starting, stopping, destroying, and interacting with your environment(s)
-- **[Probably Enough Cheatsheets](https://probablyenough.dev/cheatsheets/)** To-the-point cheatsheets for Probably Enough tools, vanilla web technologies, and even some (gasp!) frameworks and libraries I use. -->
+- **[Probably Enough Info](https://probablyenough.info/)** To-the-point cheatsheets for Probably Enough tools, vanilla web technologies, and even some (gasp!) frameworks and libraries I use. -->
 
 ---
 
