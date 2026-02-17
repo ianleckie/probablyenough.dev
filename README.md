@@ -10,8 +10,8 @@ Probably Enough is a practical set of tools for people who love writing the web,
 
 ## Probably Enough Tools:
 
-- **[nomustache](https://nomustache.probablyenough.dev/)** A simple and brutalist take on static site generation with Mustache templating and Markdown support.
 - **[huebris.js](https://huebris.probablyenough.dev/)** A script for automating generation of hue-based CSS color palettes.
+- **[nomustache](https://nomustache.probablyenough.dev/)** A simple and brutalist take on static site generation with Mustache templating and Markdown support.
 <!-- - **[Probability Box](https://pbox.probablyenough.dev/)** A bash tool for simplifying management of self-contained dev environments with Docker.
     - generate and update custom docker configs via CLI UI
         - configs saved in git
