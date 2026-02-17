@@ -1,4 +1,4 @@
-# [ProbablyEnough.dev](https://probablyenough.dev) 🤷
+# [Probably Enough](https://probablyenough.dev) 🤷
 
 Tools for crafting the web that are Probably Enough.
 
