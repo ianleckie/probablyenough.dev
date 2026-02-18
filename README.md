@@ -6,7 +6,7 @@ Tools for crafting the web that are Probably Enough.
 
 *Many projects do not need 80% of what we pretend they need.*
 
-Probably Enough is a practical set of tools for people who love writing the web, but who don't want 400MB of node_modules to publish `index.html`.
+Probably Enough is a set of tools for people who love writing the modern web, but who don't want routing, bundling and dozens of dependencies just to publish `index.html`.
 
 ---
 
