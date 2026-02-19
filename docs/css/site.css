@@ -1,23 +1,10 @@
 :root {
-    /* --tulip:         #B8C299;
-    --light-mint:    #C1DBBF;
-    
-    --khaki:         #615D4E;
-    --dark-khaki:    #524F43;
-    --darker-khaki:  #403D35;
-
-    --light-grey:    #DEDEDE;
-    --midlight-grey: #808080;
-    --mid-grey:      #616161;
-    --dark-grey:     #292929;
-    --graphite:      #1C1C1C; */
-
     --max-width: 720px;
 }
 
 body {
     background-attachment: fixed;
-    background-image: linear-gradient(180deg, var(--khaki-shade2) 0% 0%, var(--khaki-tone1) 100% 100%);
+    background-image: linear-gradient(180deg, var(--primary-shade2) 0% 0%, var(--primary-tone1) 100% 100%);
     box-sizing: border-box;
     font-size: 16px;
     min-height: 100vh;
@@ -29,7 +16,7 @@ main {
 }
 
 h1, h2 {
-    color: var(--tulip-tone3);
+    color: var(--secondary-tone3);
     font-family: Caprasimo, serif;
     font-weight: 400;
     text-align: center;
@@ -49,7 +36,7 @@ h2 {
 }
 
 .tag {
-    color: var(--tulip-tone1);
+    color: var(--secondary-tone1);
     font-family: 'Bree Serif';
     font-size: 1.2rem;
     line-height: 1.75em;
@@ -63,7 +50,7 @@ h2 {
 
 .console {
     background-color: var(--black-alpha1);
-    border: 3px solid var(--tulip-tone4-alpha3);
+    border: 3px solid var(--secondary-tint1-alpha3);
     border-radius: 0.75rem;
     box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
     color: var(--grey-tint3);
@@ -75,12 +62,15 @@ h2 {
 }
 
     .console a {
-        color: var(--tulip);
+        color: var(--secondary);
         font-weight: 600;
     }
 
     .console a:hover {
         background-color: var(--grey-shade3);
+        border-radius: 4px;
+        padding: 0.2rem 0.4rem 0.4rem;
+        margin: -0.2rem -0.4rem -0.4rem;
     }
 
 .line + .line {
@@ -92,13 +82,17 @@ h2 {
     }
 
     .line .name {
-        color: var(--tulip);
+        color: var(--secondary);
         font-weight: 600;
     }
 
+.line + .tool {
+    margin-top: 1.75rem;
+}
+
 .tool {
     /* background-color: var(--black-alpha3); */
-    border: 2px solid var(--tulip-shade3-alpha2);
+    border: 2px solid var(--secondary-shade3-alpha2);
     border-radius: 0.5rem;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     margin: 0.5rem 0;
@@ -111,7 +105,7 @@ h2 {
     }
 
     .tool .icon {
-        /* background-color: var(--khaki-shade3-alpha1); */
+        /* background-color: var(--primary-shade3-alpha1); */
         border-radius: 0.5rem;
         float: left;
         margin-left: 0.5rem;
@@ -134,7 +128,7 @@ h2 {
     }
 
     .tool h3 {
-        color: var(--tulip);
+        color: var(--secondary);
         font-size: 1.25rem;
         margin: 0;
     }
@@ -149,6 +143,7 @@ h2 {
 
 .btn:hover {
     background-color: var(--black);
+    border-color: var(--secondary-shade3);
     box-shadow: 3px 3px 6px rgba(0,0,0,0.6);
     cursor: pointer;
 }
