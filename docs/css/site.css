@@ -1,7 +1,16 @@
 /* Conf */
 
 :root {
+
     --max-width: 720px;
+
+    /* TODO: transition to @font-face */
+    --header-font-family: Caprasimo, serif;
+    --info-font-family: 'Bree Serif', serif;
+    --console-font-family: Inconsolata, monospace;
+
+    --transition-timing: 0.5s;
+
 }
 
 
@@ -13,6 +22,9 @@ body {
     background-image: linear-gradient(180deg, var(--primary-shade2) 0% 0%, var(--primary-tone1) 100% 100%);
     box-sizing: border-box;
     font-size: 16px;
+    /* prevent FOUC: */
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 main {
@@ -21,24 +33,15 @@ main {
     padding: 1rem 0;
 }
 
-h1, h2 {
+h1 {
     color: var(--secondary-tone2);
-    font-family: Caprasimo, serif;
+    font-family: var(--header-font-family);
     font-weight: 400;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0,0,0,0.4);
-}
-
-h1 {
     font-size: 4rem;
     line-height: 1.1;
     margin: 1.25rem 0 0.25rem;
-}
-
-h2 {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin: 1rem 0 -0.5rem;
 }
 
 
@@ -46,7 +49,7 @@ h2 {
 
 .tag {
     color: var(--secondary-tone3);
-    font-family: 'Bree Serif';
+    font-family: var(--info-font-family);
     font-size: 1.2rem;
     line-height: 1.4;
     margin: 0 auto;
@@ -65,7 +68,7 @@ h2 {
     border-radius: 0.75rem;
     box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
     color: var(--grey-tint3);
-    font-family: Inconsolata;
+    font-family: var(--console-font-family);
     font-size: 1.25rem;
     line-height: 1.25;
     margin: 1.5rem 0;
@@ -76,6 +79,7 @@ h2 {
         display: inline-block;
         color: var(--secondary-tone1);
         font-weight: 600;
+        transition: background-color var(--transition-timing);
     }
 
     .console a:hover {
@@ -116,46 +120,45 @@ h2 {
     margin-bottom: 1.5rem !important;
 }
 
-.tool {
-    border: 2px solid var(--secondary-shade3-alpha2);
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    margin: 0.5rem 0 0.75rem;
-    min-height: 100px;
-    padding: 1rem;
-}
-
-    .tool .icon {
+    .tools .tool {
+        border: 2px solid var(--secondary-shade3-alpha2);
         border-radius: 0.5rem;
-        float: left;
-        margin-left: 0.5rem;
-        opacity: 0.75;
-        padding: 10px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        margin: 0.5rem 0 0.75rem;
+        min-height: 100px;
+        padding: 1rem;
     }
 
-        .tool .icon img {
-            height: 80px;
-            width: 80px;
+        .tools .tool .icon {
+            border-radius: 0.5rem;
+            float: left;
+            margin-left: 0.5rem;
+            opacity: 0.75;
+            padding: 10px;
         }
 
-    .tool .desc {
-        margin-left: 132px;        
-    }
+            .tools .tool .icon img {
+                height: 80px;
+                width: 80px;
+            }
 
-    .tool a {
-        background-color: transparent !important;
-        text-decoration: none;
-    }
+        .tools .tool .desc {
+            margin-left: 132px;        
+        }
 
-    .tool h3 {
-        color: var(--secondary);
-        font-size: 1.25rem;
-        margin: 0;
-    }
+        .tools .tool a {
+            background-color: transparent !important;
+        }
 
-    .tool p {
-        margin: 0;
-    }
+        .tools .tool h3 {
+            color: var(--secondary);
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .tools .tool p {
+            margin: 0;
+        }
 
 .tech-stack {
     list-style: none;
@@ -168,7 +171,7 @@ h2 {
     .tech-stack li {
         color: var(--secondary-tint1-alpha3);
         display: inline-block;
-        font-family: 'Bree Serif', serif;
+        font-family: var(--info-font-family);
         font-size: 0.8rem;
     }
 
@@ -181,6 +184,7 @@ h2 {
             margin: 0 0.1rem;
             padding: 0 0.6rem;
             text-decoration: none;
+            transition: background-color var(--transition-timing), box-shadow var(--transition-timing);
         }
 
         .tech-stack li a:hover {
@@ -208,10 +212,12 @@ h2 {
     border-color: var(--secondary-shade3);
     box-shadow: 3px 3px 6px rgba(0,0,0,0.6);
     cursor: pointer;
+    transition: background-color var(--transition-timing), box-shadow var(--transition-timing), border var(--transition-timing);
 }
 
     .tool[data-is-card="true"]:hover .icon {
         opacity: 1;
+        transition: opacity var(--transition-timing);
     }
 
 .tool[data-is-card="true"]:active {
