@@ -28,7 +28,7 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icon.png">
 
-  <meta name="theme-color" content="rgb(107, 78, 110)">
+  <meta name="theme-color" content="rgb(52, 74, 81)">
 
 </head>
 
@@ -42,52 +42,54 @@
 
     <div class="console">
 
-      <div class="line">
+      <div class="line" data-cmd="echo $POV">
         <div class="prompt">ian@probablyenough:~$<span class="cmd"> echo $POV</span></div>
         Many projects do not need 80% of what we pretend they need.
       </div>
 
-      <div class="line">
+      <div class="line" data-cmd="echo $DESC">
         <div class="prompt">ian@probablyenough:~$<span class="cmd"> echo $DESC</span></div>
         <a href="https://github.com/ianleckie/probablyenough.dev">Probably Enough</a> is a set of tools for people who love writing the modern web, but who don't want routing, bundling and dozens of dependencies just to publish <strong>`index.html`</strong>.
       </div>
 
-      <div class="tool btn">
+      <div class="line tools" data-cmd="echo $TOOLS">
 
-        <div class="icon">
-          <img src="img/huebris-200px.png" alt="huebris.js">
+        <div class="prompt">ian@probablyenough:~$<span class="cmd"> echo $TOOLS</span></div>
+
+        <div class="tool btn">
+
+          <div class="icon">
+            <img src="img/huebris-200px.png" alt="huebris.js">
+          </div>
+
+          <div class="desc">
+            <h3><a href="https://github.com/ianleckie/huebris.js">huebris.js</a></h3>
+            A script that generates hue-based color palettes — with custom tint, tone, shade and alpha variations — using CSS color-mix().
+          </div>
+
         </div>
 
-        <div class="desc">
-          <h3><a href="https://github.com/ianleckie/huebris.js">huebris.js</a></h3>
-          A script that automatically generates hue-based CSS color palettes -- with adjustable tint, tone, shade and alpha variations -- using CSS color-mix().
+        <div class="tool">
+
+          <div class="icon">
+            <img src="img/nomustache8bit-200px.png" alt="nomustache">
+          </div>
+
+          <div class="desc">
+            <h3>nomustache (coming soon)</h3>
+            A brutalist and somewhat opinionated take on simple static site generation, based on mustache templating and markdown.
+          </div>
+
         </div>
 
       </div>
 
-      <div class="tool">
-
-        <div class="icon">
-          <img src="img/nomustache8bit-200px.png" alt="nomustache">
-        </div>
-
-        <div class="desc">
-          <h3>nomustache (coming soon)</h3>
-          A brutalist and somewhat opinionated take on simple static site generation, made with Node.js.
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="console colophon">
-
-      <div class="line">
+      <div class="line" data-cmd="echo $COLOPHON">
         <div class="prompt">ian@probablyenough:~$<span class="cmd">  echo $COLOPHON</span></div>
         Probably Enough is made by <a href="https://hire.ianleckie.me">@ianleckie</a> | <a href="https://github.com/ianleckie">github</a> | 2026
       </div>
 
-      <div class="line">
+      <div class="line" data-cmd="█">
         <div class="prompt">ian@probablyenough:~$<span class="cmd" id="cursor"> █</span></div>
       </div>
 
@@ -95,6 +97,7 @@
 
   </main>
 
+  <script src="js/main.js"></script>
   <script src="js/vendor/huebris.min.js"></script>
   <script>
     huebris.init();
