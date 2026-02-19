@@ -1,6 +1,11 @@
+/* Conf */
+
 :root {
     --max-width: 720px;
 }
+
+
+/* Composition */
 
 body {
     background-attachment: fixed;
@@ -36,6 +41,9 @@ h2 {
     margin: 1rem 0 -0.5rem;
 }
 
+
+/* Utility */
+
 .tag {
     color: var(--secondary-tone3);
     font-family: 'Bree Serif';
@@ -47,6 +55,9 @@ h2 {
     text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
     width: fit-content;
 }
+
+
+/* Blocks */
 
 .console {
     background-color: var(--black-alpha1);
@@ -62,15 +73,20 @@ h2 {
 }
 
     .console a {
-        color: var(--secondary);
+        display: inline-block;
+        color: var(--secondary-tone1);
         font-weight: 600;
     }
 
     .console a:hover {
         background-color: var(--grey-shade3);
         border-radius: 4px;
-        margin: -0.2rem -0.4rem -0.4rem;
-        padding: 0.2rem 0.4rem 0.4rem;
+        margin: -0.1rem -0.4rem -0.2rem;
+        padding: 0.1rem 0.4rem 0.2rem;
+    }
+
+    .console a:active {
+        scale: 0.97;
     }
 
 .line .prompt {
@@ -113,7 +129,7 @@ h2 {
         border-radius: 0.5rem;
         float: left;
         margin-left: 0.5rem;
-        opacity: 0.9;
+        opacity: 0.75;
         padding: 10px;
     }
 
@@ -141,22 +157,68 @@ h2 {
         margin: 0;
     }
 
-.btn:hover {
+.tech-stack {
+    list-style: none;
+    margin: 2rem auto 0;
+    padding: 0;
+    text-align: center;
+    width: fit-content;
+}
+
+    .tech-stack li {
+        color: var(--secondary-tint1-alpha3);
+        display: inline-block;
+        font-family: 'Bree Serif', serif;
+        font-size: 0.8rem;
+    }
+
+        .tech-stack li a {
+            background-color: var(--primary-tone2-alpha3);
+            border-radius: 1em;
+            color: var(--secondary-tint1-alpha3);
+            display: inline-block;
+            line-height: 2em;
+            margin: 0 0.1rem;
+            padding: 0 0.6rem;
+            text-decoration: none;
+        }
+
+        .tech-stack li a:hover {
+            background-color: var(--primary-shade2-alpha3);
+            box-shadow: 1px 1px 3px var(--primary-shade4-alpha3);
+        }
+
+        .tech-stack li a:active {
+            scale: 0.97;
+        }
+
+    .tech-stack li.title {
+        background: none;
+        color: var(--secondary-tint2-alpha4);
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+
+/* Exceptions */
+
+/* Card interactions */
+.tool[data-is-card="true"]:hover {
     background-color: var(--black);
     border-color: var(--secondary-shade3);
     box-shadow: 3px 3px 6px rgba(0,0,0,0.6);
     cursor: pointer;
 }
 
-    btn:hover .icon {
+    .tool[data-is-card="true"]:hover .icon {
         opacity: 1;
     }
 
-.btn:active {
+.tool[data-is-card="true"]:active {
     box-shadow: 4px 4px 7px rgba(0,0,0,0.8);
     scale: 0.97;
 }
 
-.tool:not(.btn):hover {
+.tool:not(.tool[data-is-card="true"]):hover {
     cursor: not-allowed;
 }
