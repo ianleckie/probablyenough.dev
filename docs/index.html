@@ -15,8 +15,8 @@
 
   <!-- site styles -->
   <link rel="stylesheet" href="css/huebris.conf.css">
-  <link rel="stylesheet" href="css/style.css">
-  
+  <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">   
+
   <!-- meta -->
   <meta name="description" content="Tools for crafting the web that are Probably Enough">
 
@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body style="visibility: hidden; opacity: 0; transition: opacity 0.3s;">
 
   <main>
 
@@ -85,7 +85,15 @@
 
       <div class="line" data-cmd-echo="$COLOPHON">
         <div class="prompt">ian@probablyenough:~$<span class="cmd"> echo $COLOPHON</span></div>
-        Probably Enough is made by <a href="https://hire.ianleckie.me">@ianleckie</a> | <a href="https://github.com/ianleckie">github</a>
+        ProbablyEnough: {
+          by: {
+            <a href="https://hire.ianleckie.me">@ianleckie</a>:
+              [
+                <a href="https://github.com/ianleckie">'github'</a>,
+                <a href="https://www.linkedin.com/in/ian-leckie/">'linkedin'</a>
+              ]
+          }
+        }
       </div>
 
       <div class="line" data-cmd-cursor="true">
