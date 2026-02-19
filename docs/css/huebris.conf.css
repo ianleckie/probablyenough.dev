@@ -5,5 +5,4 @@ html {
     --huebris-black: color-mix( in srgb, var(--primary) 10%, black 90% );
 
     --huebrisconf-global-steps: '4';
-    --huebrisconf-debug:        'true';
 }
