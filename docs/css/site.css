@@ -4,16 +4,16 @@
 
 body {
     background-attachment: fixed;
+    background-color: var(--primary-tone1);
     background-image: linear-gradient(180deg, var(--primary-shade2) 0% 0%, var(--primary-tone1) 100% 100%);
     box-sizing: border-box;
     font-size: 16px;
-    min-height: 100vh;
 }
 
 main {
-    padding: 1rem 0;
     margin: auto;
     max-width: var(--max-width);
+    padding: 1rem 0;
 }
 
 h1, h2 {
@@ -25,28 +25,27 @@ h1, h2 {
 }
 
 h1 {
-    margin: 1.25rem 0 0.25rem;
     font-size: 4rem;
     line-height: 1.1;
+    margin: 1.25rem 0 0.25rem;
 }
 
 h2 {
-    margin: 1rem 0 -0.5rem;
     font-size: 3rem;
     line-height: 1.1;
+    margin: 1rem 0 -0.5rem;
 }
 
 .tag {
     color: var(--secondary-tone1);
     font-family: 'Bree Serif';
     font-size: 1.2rem;
-    line-height: 1.75em;
+    line-height: 1.4;
     margin: 0 auto;
     padding: 0 1.25rem;
     text-align: center;
     text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
     width: fit-content;
-    line-height: 1.4;
 }
 
 .console {
@@ -70,49 +69,47 @@ h2 {
     .console a:hover {
         background-color: var(--grey-shade3);
         border-radius: 4px;
-        padding: 0.2rem 0.4rem 0.4rem;
         margin: -0.2rem -0.4rem -0.4rem;
+        padding: 0.2rem 0.4rem 0.4rem;
     }
+
+.line .prompt {
+    color: var(--grey-shade2);
+    font-weight: 600;
+}
+
+    .line .prompt .cmd {
+        color: var(--grey-shade2);
+        font-weight: 400;
+    }
+
+.line .name {
+    color: var(--secondary);
+    font-weight: 600;
+}
 
 .line + .line {
     margin-top: 1rem;
 }
 
-    .line .prompt {
-        color: var(--grey-shade2);
-        font-weight: 600;
-    }
-
-        .line .prompt .cmd {
-            color: var(--grey-shade2);
-            font-weight: 400;
-        }
-
-    .line .name {
-        color: var(--secondary);
-        font-weight: 600;
-    }
-
 .line + .tool {
     margin-top: 1.75rem;
 }
 
+.tools {
+    margin-bottom: 1.5rem !important;
+}
+
 .tool {
-    /* background-color: var(--black-alpha3); */
     border: 2px solid var(--secondary-shade3-alpha2);
     border-radius: 0.5rem;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    margin-bottom: 0.3rem;
-    padding: 1rem;
+    margin: 0.5rem 0 0.75rem;
     min-height: 100px;
+    padding: 1rem;
 }
 
-    .tool + .tool {
-        margin-top: 1.5rem;
-    }
-
     .tool .icon {
-        /* background-color: var(--primary-shade3-alpha1); */
         border-radius: 0.5rem;
         float: left;
         margin-left: 0.5rem;
@@ -143,10 +140,6 @@ h2 {
     .tool p {
         margin: 0;
     }
-
-.colophon {
-    margin: 2.5rem 0 0;
-}
 
 .btn:hover {
     background-color: var(--black);
