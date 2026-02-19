@@ -17,7 +17,7 @@ main {
 }
 
 h1, h2 {
-    color: var(--secondary-tone3);
+    color: var(--secondary-tone2);
     font-family: Caprasimo, serif;
     font-weight: 400;
     text-align: center;
