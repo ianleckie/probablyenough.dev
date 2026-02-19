@@ -1,0 +1,9 @@
+html {
+    --huebris-khaki: rgb(88, 54, 88);
+    --huebris-tulip: #B8C299;
+
+    --huebris-black: color-mix( in srgb, var(--khaki) 10%, black 90% );
+
+    --huebrisconf-global-steps: '4';
+    --huebrisconf-debug:        'true';
+}

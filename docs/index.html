@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Bree+Serif&family=Inconsolata&display=swap" rel="stylesheet">
 
   <!-- site styles -->
+  <link rel="stylesheet" href="css/huebris.conf.css">
   <link rel="stylesheet" href="css/style.css">
   
   <!-- meta -->
@@ -27,7 +28,6 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icon.png">
 
-  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="rgb(107, 78, 110)">
 
 </head>
@@ -64,7 +64,9 @@
 
       <div class="tool btn">
 
-        <div class="icon"></div>
+        <div class="icon">
+          <img src="img/huebris-200px.png" alt="huebris.js">
+        </div>
 
         <div class="desc">
           <h3><a href="https://github.com/ianleckie/huebris.js">huebris.js</a></h3>
@@ -75,7 +77,9 @@
 
       <div class="tool">
 
-        <div class="icon"></div>
+        <div class="icon">
+          <img src="img/nomustache8bit-200px.png" alt="nomustache">
+        </div>
 
         <div class="desc">
           <h3>nomustache (coming soon)</h3>
@@ -96,8 +100,14 @@
     </div>
 
   </main>
+
+  <!-- <div id="palette"></div> -->
   
-  <script src="js/app.js"></script>
+  <script src="js/vendor/huebris.min.js"></script>
+  <script>
+    huebris.init();
+    huebris.showPalette( document.getElementById( 'palette' ) );
+  </script>
 
 </body>
 
