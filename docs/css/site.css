@@ -1,12 +1,12 @@
 /* Conf */
 
-:root {
+html {
 
     --max-width: 670px;
 
-    --header-font: 'Caprasimo', serif;
-    --info-font: 'Bree Serif', serif;
-    --console-font: 'Inconsolata', monospace;
+    --header-font:       'Caprasimo', serif;
+    --info-font:         'Bree Serif', serif;
+    --console-font:      'Inconsolata', monospace;
     --console-font-bold: 'Inconsolata Bold', monospace;
 
     --transition-timing: 0.5s;
@@ -14,7 +14,7 @@
 }
 
 
-/* Composition */
+/* Base */
 
 body {
     background-attachment: fixed;
@@ -36,6 +36,15 @@ h1 {
     font-size: 4rem;
     line-height: 1.1;
     margin: 1.5rem 0 0.25rem;
+}
+
+.tagline {
+    color: var(--secondary-tone3);
+    font-family: var(--info-font);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
 }
 
 header,
@@ -78,15 +87,6 @@ footer {
 
 
 /* Layout */
-
-.tagline {
-    color: var(--secondary-tone3);
-    font-family: var(--info-font);
-    font-size: 1.2rem;
-    line-height: 1.4;
-    text-align: center;
-    text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
-}
 
 .console {
     background-color: var(--black-alpha1);
@@ -202,6 +202,8 @@ footer {
             scale: 0.97;
         }
 
+
+/* Interactions */
 
 /* Card interactions */
 .card.link:hover {
