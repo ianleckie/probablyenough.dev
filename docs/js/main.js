@@ -3,33 +3,30 @@
  */
 probablyEnough = {
 
-    addPrompts() {
-        const promptStart = '<div class="prompt">ian@probablyenough:~$<span class="cmd"';
-        const promptEnd = '</span></div>';
-        
-        // foreach .line, add prompt based on data-cmd-
-            var promptCmd = '';
-            // CMDs:
-            // '> echo {{echo}}'
-            // ' id="cursor"> █'
-
-            var prompt = promptStart + promptCmd + promptEnd;
+    updatePrompts() {
+        document.querySelectorAll( 'main h2.prompt' ).forEach( item => {
+            item.innerHTML = 'ian@probablyenough:~$<span class="cmd"> ' + item.dataset.cmd + '</span>';
+        });
     },
 
-    blinkCursor() {
-        // for .cursor, blink the text
-    },
-
-    initBtns() {
-        // foreach .btn
-            // get first link url, block link action
-            // add onclick = url, onhover = show in status
+    linkCards() {
+        document.querySelectorAll( '.card' ).forEach( item => {
+            const cardLink = item.querySelectorAll( 'a' )[0];
+            
+            if( cardLink ) {
+                const cardUrl = cardLink.href;
+                
+                cardLink.onclick = function( e ) { e.preventDefault(); };
+                
+                item.onclick = function( e ) { window.location.href = cardUrl; };
+                item.classList.add( 'link' );
+            }
+        });
     },
 
     init() {
-        this.addPrompts();
-        this.blinkCursor();
-        this.initBtns();
+        this.updatePrompts();
+        this.linkCards();
     },
 
 }
