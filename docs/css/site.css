@@ -2,7 +2,7 @@
 
 :root {
 
-    --max-width: 720px;
+    --max-width: 670px;
 
     /* TODO: transition to @font-face */
     --header-font-family: Caprasimo, serif;
@@ -27,12 +27,6 @@ body {
     visibility: visible !important;
 }
 
-main {
-    margin: auto;
-    max-width: var(--max-width);
-    padding: 1rem 0;
-}
-
 h1 {
     color: var(--secondary-tone2);
     font-family: var(--header-font-family);
@@ -41,22 +35,57 @@ h1 {
     text-shadow: 0px 4px 4px rgba(0,0,0,0.4);
     font-size: 4rem;
     line-height: 1.1;
-    margin: 1.25rem 0 0.25rem;
+    margin: 1.5rem 0 0.25rem;
 }
+
+header,
+main,
+footer {
+    margin: 1rem auto;
+    max-width: var(--max-width);
+    padding: 0.25rem 0;
+}
+
+    main h2 {
+        color: var(--grey-shade2);
+        font-family: var(--console-font-family);
+        font-size: 1.25rem;
+        line-height: 1.25;
+        font-weight: 600;
+        margin: 0.5rem 0 0;
+    }
+
+        main h2 .cmd {
+            color: var(--grey-shade2);
+            font-weight: 400;
+        }
+
+    main p {
+        margin: 0 0 1rem;
+    }
+
+    footer {
+        margin-top: 1.5rem;
+    }
+
+        footer h2 {
+            color: var(--secondary-tint2-alpha4);
+            font-family: var(--info-font-family);
+            font-size: 0.8rem;
+            margin: 0;
+            text-align: center;
+        }   
 
 
 /* Utility */
 
-.tag {
+.tagline {
     color: var(--secondary-tone3);
     font-family: var(--info-font-family);
     font-size: 1.2rem;
     line-height: 1.4;
-    margin: 0 auto;
-    padding: 0 1.25rem;
     text-align: center;
     text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
-    width: fit-content;
 }
 
 
@@ -71,8 +100,8 @@ h1 {
     font-family: var(--console-font-family);
     font-size: 1.25rem;
     line-height: 1.25;
-    margin: 1.5rem 0;
-    padding: 1.25rem 1.5rem;
+    margin: 1.25rem auto;
+    padding: 0.75rem 1.5rem 1.5rem;
 }
 
     .console a {
@@ -92,29 +121,6 @@ h1 {
     .console a:active {
         scale: 0.97;
     }
-
-.line .prompt {
-    color: var(--grey-shade2);
-    font-weight: 600;
-}
-
-    .line .prompt .cmd {
-        color: var(--grey-shade2);
-        font-weight: 400;
-    }
-
-.line .name {
-    color: var(--secondary);
-    font-weight: 600;
-}
-
-.line + .line {
-    margin-top: 1rem;
-}
-
-.line + .tool {
-    margin-top: 1.75rem;
-}
 
 .tools {
     margin-bottom: 1.5rem !important;
@@ -162,9 +168,8 @@ h1 {
 
 .tech-stack {
     list-style: none;
-    margin: 2rem auto 0;
+    margin: 0.75rem auto;
     padding: 0;
-    text-align: center;
     width: fit-content;
 }
 
@@ -196,18 +201,11 @@ h1 {
             scale: 0.97;
         }
 
-    .tech-stack li.title {
-        background: none;
-        color: var(--secondary-tint2-alpha4);
-        display: block;
-        margin-bottom: 0.5rem;
-    }
-
 
 /* Exceptions */
 
 /* Card interactions */
-.tool[data-is-card="true"]:hover {
+.card.link:hover {
     background-color: var(--black);
     border-color: var(--secondary-shade3);
     box-shadow: 3px 3px 6px rgba(0,0,0,0.6);
@@ -215,16 +213,27 @@ h1 {
     transition: background-color var(--transition-timing), box-shadow var(--transition-timing), border var(--transition-timing);
 }
 
-    .tool[data-is-card="true"]:hover .icon {
+    .card.link:hover .icon {
         opacity: 1;
         transition: opacity var(--transition-timing);
     }
 
-.tool[data-is-card="true"]:active {
+.card.link:active {
     box-shadow: 4px 4px 7px rgba(0,0,0,0.8);
     scale: 0.97;
 }
 
-.tool:not(.tool[data-is-card="true"]):hover {
+.card:not(.card.link):hover {
     cursor: not-allowed;
+}
+
+
+.cursor .cmd {
+    animation: blinker 1.7s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
