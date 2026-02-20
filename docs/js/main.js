@@ -1,15 +1,16 @@
 /**
- * ProbablyEnough.dev main object
+ * main.js @ ProbablyEnough.dev
  */
 probablyEnough = {
 
+    // replace h2 text with the text in data-cmd
     updatePrompts() {
-        // replace h2 text with the text in data-cmd
         document.querySelectorAll( 'main h2.prompt' ).forEach( item => {
             item.innerHTML = 'ian@probablyenough:~$<span class="cmd"> ' + item.dataset.cmd + '</span>';
         });
     },
 
+    // turn cards into "buttons" based on the first contained link
     linkCards() {
         document.querySelectorAll( '.card' ).forEach( item => {
             // get the first link in the card
